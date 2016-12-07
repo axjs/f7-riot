@@ -119,22 +119,23 @@
 </f7-list>
 
 <f7-link>
-   <a href={href} class="item-link {
+   <a class="item-link {
 			 back: opts.back === '', 
 			 item-content: opts.content === '', 
 			 close-panel: opts.close === ''
-			 }">
-     <div if={icon} class="item-media"><i class="icon {icon}"></i></div>
-     <div class="item-inner">
-       <div if={title} class="item-title">{title}</div>
-       <yield/>
+			 }"
+      href={ opts.href || '#' }
+      >
+	   <div class="item-content">	   
+       <div if={ opts.icon } class="item-media"><i class="icon { opts.icon }"></i></div>
+       <div class="item-inner">
+         <div if={ opts.title} class="item-title">{ opts.title }</div>
+         <yield/>
+        </div>
       </div>
    </a>
 
   <script>
-    this.icon = opts.icon || ''
-    this.title = opts.title || ''
-    this.href = opts.href || '#'
   </script>
 </f7-link>
 
