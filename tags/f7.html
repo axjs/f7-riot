@@ -36,13 +36,10 @@
 
 <f7-input>
   <div class="item-input">
-    <input type={ type } placeholder={ placeholder } value={ value }/>
+    <input type={ opts.type || 'text' } placeholder={ opts.placeholder } value={ opts.value }/>
   </div>
   
   <script>
-    this.placeholder = opts.placeholder || ''
-    this.type = opts.type || 'text'
-    this.value = opts.value
   </script>
 </f7-input>
 
