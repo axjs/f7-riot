@@ -1,2 +1,120 @@
 <f7-app>
 </f7-app>
+
+<f7-input>
+  <div class="item-input">
+    <input type={ type } placeholder={ placeholder } value={ value }/>
+  </div>
+  
+  <script>
+    this.placeholder = opts.placeholder || ''
+    this.type = opts.type || 'text'
+    this.value = opts.value
+  </script>
+</f7-input>
+
+<f7-select>
+  <div class="item-input">
+    <select >
+      <option each={name, i in options}>{ name }</option>
+    </select>
+  </div>
+  
+  <script>
+    this.options = (opts.options && opts.options.split(',')) || ['...']
+  </script>
+</f7-select>
+
+<f7-slider>
+  <div class="item-input">
+    <div class="range-slider">
+      <input type="range" min={min} max={max} value={value} step={step}/>
+    </div>
+  </div>
+
+  <script>
+    this.min = opts.min || 0
+    this.max = opts.max || 100
+    this.value = opts.value
+    this.step = opts.step || 0.1
+  </script>
+</f7-slider>
+
+<f7-checkbox>
+  <div class="item-input">
+    <label class="label-switch">
+        <input type="checkbox"/>
+        <div class="checkbox"></div>
+    </label>
+  </div>
+
+  <script>
+    this.options = (opts.options && opts.options.split(',')) || ['...']
+  </script>
+</f7-checkbox>
+
+<f7-form>
+  <div class="item-content">
+    <div if={icon} class="item-media"><i class="icon {icon}"></i></div>
+      <div class="item-inner">
+        <div if={title} class="item-title label">{ title }</div>
+            <yield/>
+    </div>
+  </div>
+  
+  <script>
+    this.icon = opts.icon || ''
+    this.title = opts.title || ''
+  </script>
+</f7-form>
+
+<f7-list>
+  <div class="item-content">
+    <div if={icon} class="item-media"><i class="icon {icon}"></i></div>
+    <div class="item-inner">
+      <div if={title} class="item-title">{title}</div>
+        <yield/>
+    </div>
+  </div>
+
+  <script>
+    this.icon = opts.icon || ''
+    this.title = opts.title || ''
+  </script>
+</f7-list>
+
+<f7-link>
+   <a href={href} class="item-link item-content">
+     <div if={icon} class="item-media"><i class="icon {icon}"></i></div>
+     <div class="item-inner">
+       <div if={title} class="item-title">{title}</div>
+       <yield/>
+      </div>
+   </a>
+
+  <script>
+    this.icon = opts.icon || ''
+    this.title = opts.title || ''
+    this.href = opts.href || '#'
+  </script>
+</f7-link>
+
+<f7-views>
+  <div class="views">
+    <yield/>
+  </div>
+</f7-views>
+
+<f7-navbar>
+  <div class="navbar">
+    <div class="navbar-inner">
+      <yield/>
+    </div>
+  </div>
+</f7-navbar>
+
+<f7-toolbar>
+  <div class="toolbar">
+    <div class="toolbar-inner"><yield/></div>
+  </div>
+</f7-toolbar>
