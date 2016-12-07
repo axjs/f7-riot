@@ -119,8 +119,9 @@
 </f7-list>
 
 <f7-link>
-   <a href={href} class="item-link item-content {
+   <a href={href} class="item-link {
 			 back: opts.back === '', 
+			 item-content: opts.content === '', 
 			 close-panel: opts.close === ''
 			 }">
      <div if={icon} class="item-media"><i class="icon {icon}"></i></div>
