@@ -4,7 +4,7 @@
   this.on('mount', function () {
     // Initialize your app
     
-    opts.root = "f7-app'	  
+    opts.root = 'f7-app'	  
     console.info('f7', this)
 	  
     var f7 = new Framework7(opts);
@@ -103,16 +103,14 @@
 
 <f7-list>
   <div class="item-content">
-    <div if={icon} class="item-media"><i class="icon {icon}"></i></div>
+    <div if={ opts.icon } class="item-media"><i class="icon { opts.icon }"></i></div>
     <div class="item-inner">
-      <div if={title} class="item-title">{title}</div>
+      <div if={ opts.title } class="item-title">{ opts.title }</div>
         <yield/>
     </div>
   </div>
 
   <script>
-    this.icon = opts.icon || ''
-    this.title = opts.title || ''
   </script>
 </f7-list>
 
@@ -150,6 +148,12 @@
     console.log('panel', this)
   </script>
 </f7-panel>
+
+<f7-pages>
+  <div class="pages">
+    <yield/>
+  </div>
+</f7-pages>
 
 <f7-views>
   <div class="views">
