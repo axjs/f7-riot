@@ -130,8 +130,9 @@
 			 close-panel: opts.close === ''
 			 }"
       href={ opts.href || '#' }
+      data-view={ opts.view }
       >
-	   <div class="item-content">	   
+     <div class="item-content">	   
        <div if={ opts.icon } class="item-media"><i class="icon { opts.icon }"></i></div>
        <div class="item-inner">
          <div if={ opts.title} class="item-title">{ opts.title }</div>
