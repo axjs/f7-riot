@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="css/my-app.css">
   </head>
   <body>
-  <f7-app pushState={true} swipePanel="left">
+  <f7-app push-state={true} swipe-panel="left">
     <!-- Status bar overlay for fullscreen mode-->
     <f7-statusbar></f7-statusbar>
     <!-- Right panel with cover effect-->
@@ -30,13 +30,11 @@
       <f7-panel cover left>
         <!-- Left view-->
         <f7-view left through>
-          <div class="navbar">
-            <div class="navbar-inner">
+          <f7-navbar>
               <div class="left"></div>
               <div class="center sliding">Left View</div>
               <div class="right"></div>
-            </div>
-          </div>
+          </f7-navbar>
           <div class="pages">
             <div data-page="index-left" class="page">
               <div class="page-content">
@@ -67,7 +65,7 @@
         </f7-view>
       </f7-panel>
       <!-- Right view, it is main view-->
-      <div class="view view-main navbar-through">
+      <f7-view main through>
         <div class="navbar">
           <div class="navbar-inner">
             <div class="center sliding">Main View</div>
@@ -113,7 +111,7 @@
             </div>
           </div>
         </div>
-      </div>
+      </f7-view>
     </f7-views>
     </f7-app>
     <!-- Riot tags -->
