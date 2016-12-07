@@ -12,9 +12,9 @@
     <link rel="stylesheet" href="css/my-app.css">
   </head>
   <body>
-    <f7-app pushState={true} swipePanel="left">
+  <f7-app pushState={true} swipePanel="left">
     <!-- Status bar overlay for fullscreen mode-->
-    <div class="statusbar-overlay"></div>
+    <f7-statusbar></f7-statusbar>
     <!-- Right panel with cover effect-->
     <f7-panel right reveal>
       <div class="content-block">
@@ -29,7 +29,7 @@
       <!-- Left panel with reveal effect-->
       <f7-panel cover left>
         <!-- Left view-->
-        <div class="view view-left navbar-through">
+        <f7-view left through>
           <div class="navbar">
             <div class="navbar-inner">
               <div class="left"></div>
@@ -64,7 +64,7 @@
               </div>
             </div>
           </div>
-        </div>
+        </f7-view>
       </f7-panel>
       <!-- Right view, it is main view-->
       <div class="view view-main navbar-through">
