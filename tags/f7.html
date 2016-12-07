@@ -11,6 +11,11 @@ var myApp = new Framework7({
 // Export selectors engine
 var $$ = Dom7;
 
+$$(document).on('pageBeforeInit', function(e) {
+    console.log('0', e)
+    riot.mount(e.target, '*')
+})	  
+	  
 // Add view
 var mainView = myApp.addView('.view-main', {
     // Because we use fixed-through navbar we can enable dynamic navbar
