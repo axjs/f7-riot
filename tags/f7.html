@@ -4,12 +4,10 @@
   this.on('mount', function () {
     // Initialize your app
     
+    opts.root = "f7-app'	  
     console.info('f7', this)
-    var f7 = new Framework7({
-      pushState: true,
-      swipePanel: 'left',
-	    root: 'f7-app'
-    });
+	  
+    var f7 = new Framework7(opts);
 
     // Export selectors engine
     var $$ = Dom7;
