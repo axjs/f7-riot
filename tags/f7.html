@@ -157,6 +157,16 @@
   </div>
 </f7-views>
 
+<f7-view>
+  <div class="view { 
+	      view-left:    opts.left === '', 
+	      view-right:   opts.right === '', 
+	      navbar-through:   opts.through === '' 
+	      }">
+    <yield/>
+  </div>
+</f7-view>
+
 <f7-navbar>
   <div class="navbar">
     <div class="navbar-inner">
