@@ -176,12 +176,23 @@
 	      panel-left:    opts.left === '', 
 	      panel-right:   opts.right === '', 
 	      panel-reveal:  opts.reveal === '', 
-	      panel-cover:   opts.cover === '' 
-	      }">
+	      panel-cover:   opts.cover === '',
+        active:        opts.opened === ''     
+	      } 
+        {opts.theme && 'theme-'+opts.theme}
+        {opts.side && 'panel-'+opts.side}
+        {opts.effect && 'panel-'+opts.effect}
+        {opts.layout &&  'layout-'+opts.layout}
+        {opts.opened &&  'active'}
+  ">
     <yield/>
   </div>
 	<script>
-    console.log('panel', this)
+    this.on('mount', function(){
+       if (this.$$('.panel-overlay').length === 0) {
+          this.$$('<div class="panel-overlay"></div>').insertBefore(this.root)
+        }
+    })
   </script>
 </f7-panel>
 
