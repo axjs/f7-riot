@@ -226,12 +226,41 @@
 </f7-page>
 
 <f7-navbar>
-  <div class="navbar">
+  <div class="navbar 
+        {opts.theme && 'theme-'+opts.theme}
+        {opts.layout && 'layout-'+opts.layout}
+  ">
+	  <yield from="before-inner"/>
     <div class="navbar-inner">
       <yield/>
     </div>
+	  <yield from="after-inner"/>
   </div>
+  
+  <script>
+  this.on('updated', function() {
+    this.f7.sizeNavbars()
+  })
+  </script>
 </f7-navbar>
+
+<f7-nav-left>
+  <div class="left {sliding: opts.sliding === ''}">
+    <yield/>
+  </div>
+</f7-nav-left>
+
+<f7-nav-right>
+  <div class="right {sliding: opts.sliding === ''}">
+    <yield/>
+  </div>
+</f7-nav-right>
+
+<f7-nav-center>
+  <div class="center {sliding: opts.sliding === ''}">
+    <yield/>
+  </div>
+</f7-nav-center>
 
 <f7-toolbar>
   <div class="toolbar">
