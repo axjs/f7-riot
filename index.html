@@ -45,31 +45,28 @@
                   </ul>
                 </f7-list>
                 <div class="content-block-title">Control Main View</div>
-                <div class="list-block">
+                <f7-list>
                   <ul>
                     <li><f7-link href="about.html" title="About" view=".view-main" class="close-panel"></f7-link></li>
                     <li><f7-link href="services.html" title="Services" view=".view-main" class="close-panel"></f7-link></li>
                     <li><f7-link href="#" title="Back in history!" view=".view-main" back close></f7-link></li>
                   </ul>
-                </div>
+                </f7-list>
             </f7-page>
           </f7-pages>
         </f7-view>
       </f7-panel>
       <!-- Right view, it is main view-->
       <f7-view main through>
-        <div class="navbar">
-          <div class="navbar-inner">
+        <f7-navbar>
             <div class="center sliding">Main View</div>
             <div class="right"><a href="#" data-panel="left" class="link open-panel icon-only"><i class="icon icon-bars"></i></a></div>
-          </div>
-        </div>
+        </f7-navbar>
         <!-- Pages-->
-        <div class="pages">
+        <f7-pages>
           <!-- Page, data-page contains page name-->
-          <div data-page="index-1" class="page">
+          <f7-page page="index-1">
             <!-- Scrollable page content-->
-            <div class="page-content">
               <div class="content-block-title">Hello</div>
               <div class="content-block">
                 <div class="content-block-inner">
@@ -78,31 +75,15 @@
                   <p>Additional right panel is also available: <a href="#" data-panel="right" class="open-panel">right panel</a></p>
                 </div>
               </div>
-              <div class="list-block">
+              <f7-list>
                 <ul>
-                  <li><a href="about.html" class="item-link">
-                      <div class="item-content">
-                        <div class="item-inner">
-                          <div class="item-title">About</div>
-                        </div>
-                      </div></a></li>
-                  <li><a href="services.html" class="item-link">
-                      <div class="item-content">
-                        <div class="item-inner">
-                          <div class="item-title">Services</div>
-                        </div>
-                      </div></a></li>
-                  <li><a href="tags/test.html" class="item-link">
-                      <div class="item-content">
-                        <div class="item-inner">
-                          <div class="item-title">Test</div>
-                        </div>
-                      </div></a></li>
+                  <li><f7-link href="about.html" title="About"></f7-link></li>
+                  <li><f7-link href="services.html" title="Services"></f7-link></li>
+                  <li><f7-link href="tags/test.html" title="Test"></f7-link></li>
                 </ul>
-              </div>
-            </div>
-          </div>
-        </div>
+              </f7-list>
+          </f7-page>
+        </f7-pages>
       </f7-view>
     </f7-views>
     </f7-app>
