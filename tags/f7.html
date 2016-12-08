@@ -100,9 +100,22 @@
 
 <f7-list-item>
   <li>
-    <f7-link href={opts.href} back={opts.back} content={opts.content} icon={opts.icon} title={opts.title} view={opts.view}>
-        <yield/>
-    </f7-link>
+   <a class="item-link {
+			 back: opts.back === '', 
+			 item-content: opts.content === '', 
+			 close-panel: opts.close === ''
+			 }"
+      href={ opts.href || '#' }
+      data-view={ opts.view }
+      >
+     <div class="item-content">	   
+       <div if={ opts.icon } class="item-media"><i class="icon { opts.icon }"></i></div>
+       <div class="item-inner">
+         <div if={ opts.title} class="item-title">{ opts.title }</div>
+         <yield/>
+        </div>
+      </div>
+   </a>
   </li>
 
   <script>
