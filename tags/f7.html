@@ -45,8 +45,19 @@
 	      view-left:      opts.left === '', 
 	      view-right:     opts.right === '', 
 	      view-main:      opts.main === '', 
-	      navbar-through: opts.through === '' 
-	      }">
+	      tab:                    opts.tab === '', 
+	      navbar-fixed:           opts.navbarFixed === '' || opts.navbarThrough === '' && this.f7.params.material, 
+	      navbar-through:         opts.navbarThrough === '', 
+        toolbar-fixed:          opts.toolbarFixed === '',
+        toolbar-through:        opts.toolbarThrough === '',
+        tabbar-fixed:           opts.tabbarFixed === '',
+        tabbar-through:         opts.tabbarThrough === '',
+        tabbar-labels-fixed:    opts.tabbarLabelsFixed === '',
+        tabbar-labels-through:  opts.tabbarLabesThrough === ''
+	      }
+        {opts.theme && 'theme-'+opts.theme}
+        {opts.layout &&  'layout-'+opts.layout}
+    ">
     <yield/>
   <script>
   this.on('mount', function () {
