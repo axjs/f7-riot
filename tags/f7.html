@@ -21,14 +21,34 @@
       riot.mount(e.target, '*')
     })	  
 	  
-    // Add view
-    var mainView = f7.addView('.view-main', {
-      // Because we use fixed-through navbar we can enable dynamic navbar
-      dynamicNavbar: true
-    });
    })    
   </script>
 </f7-app>
+
+<f7-views>
+  <div class="views">
+    <yield/>
+  </div>
+</f7-views>
+
+<f7-view>
+  <div class="view { 
+	      view-left:      opts.left === '', 
+	      view-right:     opts.right === '', 
+	      view-main:      opts.main === '', 
+	      navbar-through: opts.through === '' 
+	      }">
+    <yield/>
+  <script>
+  this.on('mount', function () {
+    // Add view
+    console.info('view', this.root)
+    this.view = this.f7.addView(this.root, opts);
+  }
+  
+  </script>
+  </div>
+</f7-view>
 
 <f7-statusbar>
 	<div class="statusbar-overlay"></div>
@@ -184,23 +204,6 @@
     </div>
   </div>
 </f7-page>
-
-<f7-views>
-  <div class="views">
-    <yield/>
-  </div>
-</f7-views>
-
-<f7-view>
-  <div class="view { 
-	      view-left:      opts.left === '', 
-	      view-right:     opts.right === '', 
-	      view-main:      opts.main === '', 
-	      navbar-through: opts.through === '' 
-	      }">
-    <yield/>
-  </div>
-</f7-view>
 
 <f7-navbar>
   <div class="navbar">
