@@ -12,7 +12,7 @@
     // Export selectors engine
     var $$ = Dom7;
     
-    riot.mixin({
+    riot.mixin('f7', {
       f7: f7,
       $$: $$,
       TEST : function() {}
@@ -41,6 +41,7 @@
 	      }">
     <yield/>
   <script>
+	this.mixin('f7')
   this.on('mount', function () {
     // Add view
     console.info('view', this.root, this)
