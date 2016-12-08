@@ -39,7 +39,7 @@
   this.on('mount', function () {
     // Add view
     console.info('view', this.root, this)
-    this.view = this.f7.addView(this.root, opts);
+    this.view = this.f7.addView(this.root.childNode[0], opts);
   })
   
   </script>
