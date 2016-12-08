@@ -1,9 +1,7 @@
 <f7-app>
   <yield/>
   <script>  
-  //this.on('mount', function () {
     // Initialize your app
-    
     opts.root = 'f7-app'	  
     console.info('f7', this)
 	  
@@ -12,17 +10,14 @@
     // Export selectors engine
     var $$ = Dom7;
     
-    riot.mixin('f7', {
+    riot.mixin({
       f7: f7,
-      $$: $$,
-      TEST : function() {}
+      $$: $$
     })
     
     $$(document).on('pageBeforeInit', function(e) {
       riot.mount(e.target, '*')
     })	  
-	  
-   //})    
   </script>
 </f7-app>
 
@@ -41,7 +36,6 @@
 	      }">
     <yield/>
   <script>
-	this.mixin('f7')
   this.on('mount', function () {
     // Add view
     console.info('view', this.root, this)
