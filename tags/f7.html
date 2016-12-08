@@ -255,7 +255,7 @@
     <div class="content-block-inner" if={ opts.inner === '' }>
       <yield/>
     </div>
-    <yield if={ opts.inner !== '' }/>
+    <virtual if={ opts.inner !== '' }><yield/></virtual>
     
   </div>
 </f7-content-block>
