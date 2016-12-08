@@ -238,3 +238,25 @@
     <div class="toolbar-inner"><yield/></div>
   </div>
 </f7-toolbar>
+
+<f7content-block-title>
+  <div class="content-block-title"><yield/></div>
+</f7content-block-title>
+
+<f7content-block>
+  <div class="content-block {
+          inset: opts.inset === '',
+          tabs: opts.tabs === '',
+          tab: opts.tab === '',
+          active: opts.active === '',
+          no-hairlines: opts.noHairlines === '',
+          no-hairlines-between: opts.noHairlinesBetween === '',              
+          }">
+    <div class="content-block-inner" if={ opt.inner }>
+      <yield/>
+    </div>
+    <yield if={ !opt.inner }/>
+    <yield/>
+    
+  </div>
+</f7content-block>
