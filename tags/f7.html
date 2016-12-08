@@ -252,11 +252,10 @@
           no-hairlines: opts.noHairlines === '',
           no-hairlines-between: opts.noHairlinesBetween === '',              
           }">
-    <div class="content-block-inner" if={ opts.inner }>
+    <div class="content-block-inner" if={ opts.inner === '' }>
       <yield/>
     </div>
-    <yield if={ !opts.inner }/>
-    <yield/>
+    <yield if={ opts.inner !== '' }/>
     
   </div>
 </f7-content-block>
