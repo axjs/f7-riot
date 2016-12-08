@@ -8,6 +8,7 @@
     <title>My App</title>
     <!-- Path to Framework7 Library CSS-->
     <link rel="stylesheet" href="css/framework7.ios.css">
+    <link rel="stylesheet" href="css/framework7.ios.colors.css">
     <!-- Path to your custom app styles-->
     <link rel="stylesheet" href="css/my-app.css">
   </head>
@@ -27,31 +28,27 @@
       <!-- Panels overlay-->
       <f7-statusbar></f7-statusbar>
       <!-- Left panel with reveal effect-->
-      <f7-panel cover left layout="dark" theme="pink">
-        <!-- Left view-->
-        <f7-view left through dynamic-navbar={true}>
-          <f7-navbar>
-              <div class="left"></div>
-              <div class="center sliding">Left View</div>
-              <div class="right"></div>
-          </f7-navbar>
-          <f7-pages>
-            <f7-page page="index-left">
-                <div class="content-block-title">Left View Links</div>
-                <f7-list>
-                    <f7-list-item href="left-page-1.html" title="Left Page 1" data-view=".view-left"></f7-list-item>
-                    <f7-list-item href="left-page-2.html" title="Left Page 2"></f7-list-item>
-                </f7-list>
-                <div class="content-block-title">Control Main View</div>
-                <f7-list>
-                    <f7-list-item href="about.html" title="About" view=".view-main" close></f7-list-item>
-                    <f7-list-item href="services.html" title="Services" view=".view-main" close></f7-list-item>
-                    <f7-list-item href="#" title="Back in history!" view=".view-main" back close></f7-list-item>
-                </f7-list>
-            </f7-page>
-          </f7-pages>
-        </f7-view>
-      </f7-panel>
+    <f7-panel left cover layout="dark">
+      <f7-content-block-title>Left Panel</f7-content-block-title>
+      <f7-content-block-title>
+        <p>This is a side panel. You can close it by clicking outsite or on this link: <a href="#" class="close-panel">close me</a>. You can put here anything, even another isolated view like in <a href="#" data-panel="right" class="open-panel">Right Panel</a></p>
+      </f7-content-block-title>
+      <f7-content-block-title>Framework7 Kitchen Sink</f7-content-block-title>
+      <f7-list>
+          <f7-list-item href="forms.html" icon="icon-f7" title="Forms" close></f7-list-item>
+          <f7-list-item href="list-view.html" icon="icon-f7" title="List View" close></f7-list-item>
+          <f7-list-item href="media-lists.html" icon="icon-f7" title="Media Lists" close></f7-list-item>
+          <f7-list-item href="modals.html" icon="icon-f7" title="Modalss" close></f7-list-item>
+          <f7-list-item href="bars.html" icon="icon-f7" title="Navbars And Toolbars" close></f7-list-item>
+          <f7-list-item href="popover.html" icon="icon-f7" title="Popover" close></f7-list-item>
+          <f7-list-item href="panels.html" icon="icon-f7" title="Side Panels" close></f7-list-item>
+          <f7-list-item href="swipe-delete.html" icon="icon-f7" title="Swipe To Delete" close></f7-list-item>
+          <f7-list-item href="swiper.html" icon="icon-f7" title="Swiper Slider" close></f7-list-item>
+          <f7-list-item href="tabs.html" icon="icon-f7" title="Tabs" close></f7-list-item>
+      </f7-list>
+      <f7-content-block>
+        <p>Long text block goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sem urna, gravida non scelerisque id, fringilla ac velit. Phasellus elementum a ipsum at ornare. Mauris sagittis rhoncus euismod. Integer convallis augue eu lacus ultrices, in dictum elit consequat. Nulla faucibus massa id felis egestas eleifend. Proin consequat dignissim magna ut scelerisque. Vestibulum ac lorem semper, posuere sapien nec, pharetra massa. Nulla a tellus facilisis, sollicitudin quam porta, aliquam lorem. Fusce dignissim eros ac diam molestie, ut ultrices lorem tristique. Ut facilisis augue ac nisi egestas malesuada. Nunc posuere tortor quis eleifend mollis. Aliquam erat volutpat. Donec feugiat elit tellus, nec convallis orci elementum in. Sed urna mi, vestibulum id tempus id, pretium et ante. Pellentesque eget sollicitudin ligula. Phasellus pellentesque velit eu porta suscipit.</p>
+      </f7-content-block>
       <!-- Right view, it is main view-->
       <f7-view main through dynamic-navbar={true}>
         <f7-navbar>
